@@ -1,10 +1,13 @@
 import requests
 from bs4 import BeautifulSoup
 import csv
+from time import sleep
+
 
 def findMnemonic(word):
     link = 'https://mnemonicdictionary.com/?word=' + word
     page = requests.get(link)
+    sleep(2)
     txt = page.text
     status = page.status_code
     soup = BeautifulSoup(page.content,'html5lib')
