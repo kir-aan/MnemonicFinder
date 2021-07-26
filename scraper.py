@@ -29,7 +29,7 @@ findMnemonic(word)
 
 while(True):
     next = input("Do you want to find mnemonic for another word?(Y/N): ")
-    if(next=="N"):
+    if(next=="N" or next=='n'):
         break
     print("Enter the word you want to find mnemonic for: ",end='')
     word = input()
